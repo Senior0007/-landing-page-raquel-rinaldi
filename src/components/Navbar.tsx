@@ -87,7 +87,7 @@ export default function Navbar() {
             <img 
               src="/logo-branca.png" 
               alt="Raquel Rinaldi Advocacia" 
-              className="h-28 sm:h-32 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              className="h-16 sm:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </a>
 

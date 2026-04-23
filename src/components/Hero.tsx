@@ -154,7 +154,7 @@ export default function Hero() {
               <div className="absolute -inset-4 bg-gradient-to-r from-[#D4AF37]/20 to-transparent rounded-3xl blur-2xl" />
               
               {/* Image container */}
-              <div className="relative bg-transparent rounded-3xl overflow-hidden border border-[#D4AF37]/20 shadow-2xl min-h-[500px]">
+              <div className="relative bg-transparent rounded-3xl overflow-hidden border border-[#D4AF37]/20 shadow-2xl min-h-[350px]">
                 <img
                   src="/images/1.png"
                   alt={`Dra. Raquel Rinaldi - Especialista em Direito Previdenciário com ${COMPANY_INFO.yearsExperience} anos de experiência, Doutora em Direito e Professora`}
