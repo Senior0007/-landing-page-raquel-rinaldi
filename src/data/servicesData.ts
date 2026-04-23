@@ -68,25 +68,27 @@ export const servicesData: ServiceDetail[] = [
     
     painPoints: {
       title: 'Você trabalhou a vida inteira. Merece receber o que é seu por direito.',
-      description: 'Muitos brasileiros perdem dinheiro todos os meses porque não sabem como planejar corretamente sua aposentadoria.',
+      description: 'Muitos brasileiros deixam de receber valores importantes todos os meses por falta de um planejamento previdenciário adequado.',
       questions: [
         'Você sabe qual é o melhor momento para se aposentar?',
-        'Está recebendo o valor máximo que tem direito?',
-        'Conhece todas as regras de transição que podem beneficiá-lo?',
-        'Tem certeza que seu tempo de contribuição está correto no INSS?'
+        'Está recebendo o valor máximo a que tem direito?',
+        'Conhece as regras de transição que podem beneficiar o seu caso?',
+        'Tem certeza de que seu tempo de contribuição está corretamente registrado no INSS?',
+        'Um bom planejamento faz toda a diferença no valor do seu benefício e na sua segurança futura.'
       ]
     },
     
     explanation: {
       title: 'Como Funciona o Planejamento de Aposentadoria',
-      description: 'A aposentadoria é um dos momentos mais importantes da sua vida. Um planejamento inadequado pode significar a perda de milhares de reais ao longo dos anos.',
+      description: 'A aposentadoria é um dos momentos mais importantes da sua vida — e um planejamento inadequado pode resultar na perda de valores significativos ao longo dos anos. Planejar corretamente é garantir segurança, tranquilidade e o melhor benefício possível para o seu futuro.',
       details: [
         'Analisamos todo seu histórico contributivo no CNIS',
         'Identificamos o melhor tipo de aposentadoria para seu caso',
         'Calculamos o momento ideal para requerer o benefício',
         'Verificamos possibilidade de reconhecimento de tempo especial',
         'Regularizamos vínculos e contribuições não computadas',
-        'Garantimos que você receba o valor máximo possível'
+        'Garantimos que você receba o valor máximo possível',
+        'Realizamos revisões quando necessário'
       ]
     },
     
@@ -152,9 +154,9 @@ export const servicesData: ServiceDetail[] = [
     ],
     
     finalCTA: {
-      headline: 'Não Deixe Dinheiro na Mesa',
-      subheadline: 'Cada mês que passa sem o planejamento correto pode significar perda de valores',
-      urgency: 'Consulta gratuita disponível hoje'
+      headline: 'Não perca qualidade de vida: conquiste a melhor aposentadoria que você pode ter',
+      subheadline: 'Cada mês sem o planejamento adequado pode representar benefícios que você deixa de aproveitar',
+      urgency: ''
     },
     
     whatsappMessage: 'Olá Dra. Raquel, gostaria de uma análise do meu caso de aposentadoria.'
@@ -164,24 +166,25 @@ export const servicesData: ServiceDetail[] = [
     slug: 'bpc-loas',
     title: 'BPC/LOAS',
     subtitle: 'Benefício de Prestação Continuada para Quem Mais Precisa',
-    headline: 'Você Tem Direito ao BPC/LOAS',
+    headline: 'Você Tem Direito ao BPC/LOAS?',
     subheadline: 'Benefício de um salário mínimo mensal para idosos 65+ e pessoas com deficiência de baixa renda',
     image: '/images/raquel-2.jpg',
     imageAlt: 'Dra. Raquel Rinaldi - Especialista em BPC/LOAS',
     
     painPoints: {
       title: 'Milhares de brasileiros têm direito ao BPC/LOAS e não sabem.',
-      description: 'O Benefício de Prestação Continuada pode mudar a vida de quem mais precisa. Mas o INSS nega muitos pedidos que deveriam ser aprovados.',
+      description: 'O Benefício de Prestação Continuada pode transformar a vida de quem mais precisa — mas muitos pedidos ainda são negados indevidamente pelo INSS.',
       questions: [
-        'Você tem 65 anos ou mais e renda familiar baixa?',
-        'Possui alguma deficiência que dificulta sua vida?',
-        'Tem filho(a) com autismo ou deficiência?',
-        'Seu pedido de BPC foi negado injustamente?'
+        'Você tem 65 anos ou mais e possui renda familiar baixa?',
+        'Possui alguma deficiência que impacta sua vida diária?',
+        'Tem filho(a) com autismo ou outra deficiência?',
+        'Seu pedido de BPC já foi negado de forma injusta?',
+        'Com a orientação correta, é possível reverter negativas e garantir esse direito.'
       ]
     },
     
     explanation: {
-      title: 'O Que é o BPC/LOAS',
+      title: 'O Que é o BPC/LOAS?',
       description: 'O Benefício de Prestação Continuada (BPC/LOAS) é um direito garantido pela Constituição Federal. É um salário mínimo mensal para quem realmente precisa.',
       details: [
         'Não precisa ter contribuído para o INSS',
@@ -267,14 +270,14 @@ export const servicesData: ServiceDetail[] = [
     slug: 'revisao-de-beneficios',
     title: 'Revisão de Benefícios',
     subtitle: 'Corrija Erros e Receba o Valor Justo',
-    headline: 'Seu Benefício Pode Estar Calculado Errado',
-    subheadline: 'Milhares de brasileiros recebem menos do que deveriam. Revisamos e corrigimos para você receber o valor justo com retroativos.',
-    image: '/images/raquel-revisao.jpg',
+    headline: 'Seu benefício pode estar sendo calculado de forma incorreta — e isso pode impactar diretamente o valor que você recebe',
+    subheadline: 'Milhares de brasileiros recebem menos do que deveriam. Revisamos e corrigimos para garantir o valor justo, com pagamento de retroativos.',
+    image: '/images/RAQUEL ESCRITORIO 8.JPG',
     imageAlt: 'Dra. Raquel Rinaldi - Especialista em Revisão de Benefícios Previdenciários',
     
     painPoints: {
-      title: 'Você pode estar perdendo dinheiro todos os meses.',
-      description: 'O INSS comete erros frequentes nos cálculos. Uma revisão pode aumentar significativamente seu benefício e recuperar valores atrasados.',
+      title: 'Você pode estar deixando de receber o valor correto todos os meses.',
+      description: 'Erros no cálculo do INSS são mais comuns do que se imagina — e uma revisão pode aumentar seu benefício e recuperar valores atrasados.',
       questions: [
         'Seu benefício foi calculado corretamente?',
         'Todas as suas contribuições foram consideradas?',
@@ -285,7 +288,7 @@ export const servicesData: ServiceDetail[] = [
     
     explanation: {
       title: 'Como Funciona a Revisão de Benefícios',
-      description: 'A revisão de benefícios é um direito seu. Corrigimos erros de cálculo do INSS e garantimos que você receba o valor correto, além de recuperar diferenças atrasadas.',
+      description: 'A revisão de benefícios do INSS é o processo de análise do seu benefício para verificar se o valor foi calculado corretamente ou se há erros que podem ser corrigidos. Isso pode incluir, por exemplo: contribuições que não foram consideradas; períodos de trabalho ignorados; aplicação incorreta das regras previdenciárias; direito a teses revisionais, como a chamada revisão da vida toda. Se for identificado algum erro, é possível solicitar a correção junto ao INSS ou pela via judicial. Quando a revisão é aceita, o beneficiário pode ter: aumento no valor mensal do benefício; pagamento de valores atrasados (retroativos). É uma forma de garantir que você esteja recebendo exatamente o que a lei assegura.',
       details: [
         'Revisão da Vida Toda - considera todas as contribuições desde 1994',
         'Revisão do Teto - para quem contribuiu acima do teto',
@@ -377,12 +380,13 @@ export const servicesData: ServiceDetail[] = [
     
     painPoints: {
       title: 'Quando a vida muda, você precisa de segurança.',
-      description: 'Doença, maternidade, acidente ou perda de um ente querido. Nesses momentos difíceis, você tem direito a benefícios que podem fazer toda diferença.',
+      description: 'Doença, maternidade, acidente ou a perda de um ente querido. Em momentos como esses, você pode ter direito a benefícios que fazem toda a diferença.',
       questions: [
-        'Está doente e não pode trabalhar?',
+        'Está doente e impossibilitado de trabalhar?',
         'Sofreu um acidente que deixou sequelas?',
         'Está grávida e precisa do salário-maternidade?',
-        'Perdeu um familiar que era segurado do INSS?'
+        'Perdeu um familiar que era segurado do INSS?',
+        'Conhecer e acessar seus direitos é essencial para garantir proteção e segurança nesses momentos.'
       ]
     },
     
@@ -474,18 +478,18 @@ export const servicesData: ServiceDetail[] = [
     title: 'Planejamento Previdenciário',
     subtitle: 'Estratégia Personalizada para Seu Futuro',
     headline: 'Planeje Hoje, Garanta Seu Futuro',
-    subheadline: 'Análise criteriosa do seu caso, identificação do melhor momento para aposentar e estratégias para maximizar seus benefícios.',
+    subheadline: 'Análise estratégica do seu caso para definir o melhor momento de se aposentar e maximizar seus benefícios.',
     image: '/images/raquel-5.jpg',
     imageAlt: 'Dra. Raquel Rinaldi - Especialista em Planejamento Previdenciário',
     
     painPoints: {
       title: 'Decisões erradas hoje podem custar caro no futuro.',
-      description: 'O planejamento previdenciário é essencial para garantir que você tome as melhores decisões sobre sua aposentadoria e maximize seus benefícios.',
+      description: 'O planejamento previdenciário é essencial para que você tome as melhores decisões e alcance o melhor benefício possível.',
       questions: [
-        'Quando é o melhor momento para você se aposentar?',
-        'Qual regra de transição é mais vantajosa para você?',
+        'Quando é o melhor momento para se aposentar?',
+        'Qual regra de transição é mais vantajosa para o seu caso?',
         'Vale a pena continuar contribuindo?',
-        'Como regularizar seu CNIS para não perder direitos?'
+        'Seu CNIS está regularizado para evitar perdas de direitos?'
       ]
     },
     

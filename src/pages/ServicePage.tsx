@@ -8,7 +8,7 @@ import FloatingCard from '../components/FloatingCard';
 import GradientText from '../components/GradientText';
 import TestimonialsColumns from '../components/ui/testimonials-columns-1';
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
   'trending-up': TrendingUp,
   'shield-check': Shield,
   'clock': Clock,
@@ -113,7 +113,7 @@ export default function ServicePage() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#25d366] to-[#128c7e] text-white font-semibold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(37,211,102,0.4)]"
+                  className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#1e40af] to-[#1d4ed8] text-white font-semibold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(30,64,175,0.4)]"
                 >
                   <MessageCircle size={20} />
                   <span>Consulta Gratuita</span>
@@ -193,9 +193,11 @@ export default function ServicePage() {
       <section className="relative py-24 lg:py-32 bg-gradient-to-b from-transparent via-[#0d1829] to-transparent">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl font-bold mb-6 font-[family-name:var(--font-display)]">
-              <GradientText>{service.explanation.title}</GradientText>
-            </h2>
+              <h2 className="text-3xl lg:text-4xl font-bold mb-6 font-[family-name:var(--font-display)]">
+                <GradientText gradient="from-[#D4AF37] via-[#FFD700] to-[#D4AF37]">
+                  {service.explanation.title}
+                </GradientText>
+              </h2>
             <p className="text-lg text-white/70 max-w-3xl mx-auto">
               {service.explanation.description}
             </p>
@@ -223,7 +225,9 @@ export default function ServicePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-5xl font-bold mb-6 font-[family-name:var(--font-display)]">
-              <GradientText>Por Que Escolher Nosso Serviço</GradientText>
+              <GradientText gradient="from-[#D4AF37] via-[#FFD700] to-[#D4AF37]">
+                Por Que Escolher Nosso Serviço
+              </GradientText>
             </h2>
           </div>
 
@@ -254,7 +258,9 @@ export default function ServicePage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-5xl font-bold mb-6 font-[family-name:var(--font-display)]">
-              <GradientText>Como Funciona</GradientText>
+              <GradientText gradient="from-[#D4AF37] via-[#FFD700] to-[#D4AF37]">
+                Como Funciona
+              </GradientText>
             </h2>
           </div>
 
@@ -280,7 +286,9 @@ export default function ServicePage() {
           <FloatingCard>
             <GlassCard className="p-12">
               <h2 className="text-4xl lg:text-5xl font-bold mb-6 font-[family-name:var(--font-display)]">
-                <GradientText>{service.finalCTA.headline}</GradientText>
+                <GradientText gradient="from-[#D4AF37] via-[#FFD700] to-[#D4AF37]">
+                  {service.finalCTA.headline}
+                </GradientText>
               </h2>
               <p className="text-xl text-white/70 mb-4">
                 {service.finalCTA.subheadline}
@@ -293,7 +301,7 @@ export default function ServicePage() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#25d366] to-[#128c7e] text-white font-bold text-xl rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(37,211,102,0.5)]"
+                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gradient-to-r from-[#1e40af] to-[#1d4ed8] text-white font-bold text-xl rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(30,64,175,0.5)]"
               >
                 <MessageCircle size={24} />
                 Falar com Dra. Raquel Agora
@@ -301,15 +309,15 @@ export default function ServicePage() {
 
               <div className="mt-8 flex items-center justify-center gap-6 text-sm text-white/60">
                 <div className="flex items-center gap-2">
-                  <Check size={16} className="text-[#25d366]" />
+                  <Check size={16} className="text-[#1e40af]" />
                   Consulta Gratuita
                 </div>
                 <div className="flex items-center gap-2">
-                  <Check size={16} className="text-[#25d366]" />
+                  <Check size={16} className="text-[#1e40af]" />
                   Atendimento Nacional
                 </div>
                 <div className="flex items-center gap-2">
-                  <Check size={16} className="text-[#25d366]" />
+                  <Check size={16} className="text-[#1e40af]" />
                   OAB/RJ 147.852
                 </div>
               </div>

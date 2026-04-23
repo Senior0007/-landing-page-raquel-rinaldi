@@ -6,7 +6,7 @@ import GlassCard from './GlassCard';
 import GradientText from './GradientText';
 import { SERVICES } from '../lib/constants';
 
-const iconMap: Record<string, React.ComponentType<any>> = {
+const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
   calendar: Calendar,
   clock: Clock,
   heart: Heart,

@@ -53,6 +53,19 @@ export default function Hero() {
             animate="visible"
             className="text-center lg:text-left"
           >
+            {/* Logo */}
+            <motion.div 
+              variants={itemVariants}
+              className="mb-8"
+            >
+              <img
+                src="/LOGO BRANCA vertical - Copia.png"
+                alt="Raquel Rinaldi Advocacia - Logo"
+                className="h-56 sm:h-64 lg:h-72 xl:h-80 2xl:h-96 mx-auto lg:mx-0 object-contain drop-shadow-2xl"
+                loading="eager"
+              />
+            </motion.div>
+
             {/* Badge */}
             <motion.div 
               variants={itemVariants} 
@@ -83,8 +96,7 @@ export default function Hero() {
               variants={itemVariants}
               className="text-lg sm:text-xl text-white/70 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed font-[family-name:var(--font-body)]"
             >
-              Há mais de {COMPANY_INFO.yearsExperience} anos lutando por brasileiros que trabalharam a vida inteira 
-              e merecem receber o melhor do INSS. Atendimento em todo o Brasil.
+              Garantindo aposentadorias dignas e o acesso a benefícios previdenciários para quem realmente precisa.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -93,7 +105,7 @@ export default function Hero() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#25d366] to-[#128c7e] text-white font-semibold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(37,211,102,0.4)] focus-visible:ring-2 focus-visible:ring-[#25d366] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a1628]"
+                className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#1e40af] to-[#1d4ed8] text-white font-semibold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(30,64,175,0.4)] focus-visible:ring-2 focus-visible:ring-[#1e40af] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a1628]"
                 aria-label="Falar com advogada pelo WhatsApp"
               >
                 <span className="relative z-10 flex items-center gap-3">
@@ -121,7 +133,7 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-2 text-white/60">
                 <Clock size={18} className="text-[#D4AF37]" />
-                <span className="text-sm">Resposta em até 2h</span>
+                <span className="text-sm">Resposta ágil</span>
               </div>
               <div className="flex items-center gap-2 text-white/60">
                 <Shield size={18} className="text-[#D4AF37]" />
@@ -142,17 +154,13 @@ export default function Hero() {
               <div className="absolute -inset-4 bg-gradient-to-r from-[#D4AF37]/20 to-transparent rounded-3xl blur-2xl" />
               
               {/* Image container */}
-              <div className="relative rounded-3xl overflow-hidden border border-[#D4AF37]/20 shadow-2xl">
+              <div className="relative bg-transparent rounded-3xl overflow-hidden border border-[#D4AF37]/20 shadow-2xl min-h-[500px]">
                 <img
-                  src="/uploads/raquel-hero.jpg"
+                  src="/images/1.png"
                   alt={`Dra. Raquel Rinaldi - Especialista em Direito Previdenciário com ${COMPANY_INFO.yearsExperience} anos de experiência, Doutora em Direito e Professora`}
-                  className="w-full h-auto object-cover"
+                  className="w-full h-full object-cover object-center-top block"
                   loading="eager"
-                  width={600}
-                  height={750}
                 />
-                {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/60 via-transparent to-transparent" />
                 
                 {/* Floating card */}
                 <motion.div
@@ -162,7 +170,7 @@ export default function Hero() {
                   className="absolute bottom-6 left-6 right-6 glass rounded-2xl p-5"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#25d366] to-[#128c7e] flex items-center justify-center flex-shrink-0">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#1e40af] to-[#1d4ed8] flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl">✓</span>
                     </div>
                     <div>

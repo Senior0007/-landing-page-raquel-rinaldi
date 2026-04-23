@@ -87,7 +87,7 @@ export default function Navbar() {
             <img 
               src="/logo-branca.png" 
               alt="Raquel Rinaldi Advocacia" 
-              className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              className="h-28 sm:h-32 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </a>
 
@@ -111,7 +111,7 @@ export default function Navbar() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#25d366] to-[#128c7e] text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(37,211,102,0.4)] focus-visible:ring-2 focus-visible:ring-[#25d366] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a1628]"
+              className="group relative inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#1e40af] to-[#1d4ed8] text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(30,64,175,0.4)] focus-visible:ring-2 focus-visible:ring-[#1e40af] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a1628]"
               aria-label="Fale conosco pelo WhatsApp"
             >
               <Phone size={18} className="group-hover:animate-pulse" />
@@ -123,9 +123,10 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="lg:hidden p-2 text-white hover:text-[#D4AF37] transition-colors"
+            className="lg:hidden p-2 text-white hover:text-[#D4AF37] transition-colors z-50 relative"
             aria-label={isMobileOpen ? 'Fechar menu' : 'Abrir menu'}
             aria-expanded={isMobileOpen}
+            type="button"
           >
             {isMobileOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -135,45 +136,57 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       <AnimatePresence>
         {isMobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="lg:hidden glass mt-2 mx-4 rounded-2xl overflow-hidden"
-          >
-            <div className="p-6 space-y-4">
-              {navLinks.map((link, index) => (
-                <motion.a
-                  key={link.href}
-                  href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                  className="block text-lg font-medium text-white/90 hover:text-[#D4AF37] py-2 transition-colors"
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="lg:hidden fixed inset-0 bg-black/50 z-40"
+              onClick={() => setIsMobileOpen(false)}
+            />
+            
+            {/* Menu Content */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+              className="lg:hidden fixed top-20 left-4 right-4 z-50 glass rounded-2xl overflow-hidden"
+            >
+              <div className="p-6 space-y-4">
+                {navLinks.map((link, index) => (
+                  <motion.a
+                    key={link.href}
+                    href={link.href}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.05 }}
+                    className="block text-lg font-medium text-white/90 hover:text-[#D4AF37] py-2 transition-colors"
+                  >
+                    {link.label}
+                  </motion.a>
+                ))}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.25 }}
+                  className="pt-4 border-t border-white/10"
                 >
-                  {link.label}
-                </motion.a>
-              ))}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.25 }}
-                className="pt-4 border-t border-white/10"
-              >
-                <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-gradient-to-r from-[#25d366] to-[#128c7e] text-white font-semibold rounded-xl transition-all hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(37,211,102,0.4)]"
-                >
-                  <Phone size={20} />
-                  Fale pelo WhatsApp
-                </a>
-              </motion.div>
-            </div>
-          </motion.div>
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-gradient-to-r from-[#1e40af] to-[#1d4ed8] text-white font-semibold rounded-xl transition-all hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(30,64,175,0.4)]"
+                  >
+                    <Phone size={20} />
+                    Fale pelo WhatsApp
+                  </a>
+                </motion.div>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </motion.header>

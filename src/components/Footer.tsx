@@ -1,13 +1,17 @@
-import { MapPin, Mail, Phone, Instagram, Linkedin, Facebook } from 'lucide-react';
+import { MapPin, Mail, Phone, Instagram, Linkedin, Facebook, Youtube } from 'lucide-react';
 import { COMPANY_INFO, WHATSAPP_URL } from '../lib/constants';
 
 const footerLinks = {
   serviços: [
-    { label: 'Aposentadoria por Idade', href: '#servicos' },
-    { label: 'Aposentadoria por Tempo', href: '#servicos' },
-    { label: 'BPC/LOAS', href: '#servicos' },
-    { label: 'Revisão de Benefício', href: '#servicos' },
-    { label: 'Benefício por Incapacidade', href: '#servicos' },
+    { label: 'Aposentadoria por Idade', href: '/servicos/aposentadorias' },
+    { label: 'Aposentadoria por Tempo', href: '/servicos/aposentadorias' },
+    { label: 'BPC/LOAS', href: '/servicos/bpc-loas' },
+    { label: 'Revisão de Benefício', href: '/servicos/revisao-de-beneficios' },
+    { label: 'Benefício por Incapacidade', href: '/servicos/auxilios-e-beneficios' },
+    { label: 'Planejamento Previdenciário', href: '/servicos/planejamento-previdenciario' },
+    { label: 'Salário-Maternidade', href: '/servicos/auxilios-e-beneficios' },
+    { label: 'Pensão por Morte', href: '/servicos/auxilios-e-beneficios' },
+    { label: 'Contestações e Recursos', href: '/servicos/contestacoes-e-recursos' },
   ],
   empresa: [
     { label: 'Sobre', href: '#sobre' },
@@ -35,7 +39,7 @@ export default function Footer() {
               <img 
                 src="/logo-branca.png" 
                 alt="Raquel Rinaldi Advocacia" 
-                className="h-12 w-auto object-contain"
+                className="h-24 w-auto object-contain"
               />
             </a>
             <p className="text-white/50 text-sm leading-relaxed mb-6 max-w-sm font-[family-name:var(--font-body)]">
@@ -90,23 +94,49 @@ export default function Footer() {
             </p>
             
             {/* Social links */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <a
-                href="#"
+                href="https://www.instagram.com/raquelrinaldioficial?igsh=c2V6ajU4b213aDB2"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/50 hover:text-[#D4AF37] hover:bg-[#D4AF37]/10 transition-all"
                 aria-label="Instagram"
               >
                 <Instagram size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.tiktok.com/@superdoutora?_r=1&_t=ZS-95aXoeKq25q"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/50 hover:text-[#D4AF37] hover:bg-[#D4AF37]/10 transition-all"
+                aria-label="TikTok"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-.88-.05A6.33 6.33 0 0 0 5.16 20.5a6.34 6.34 0 0 0 10.86-4.43V7.83a8.2 8.2 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.2-.26z"/>
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/raquelrinaldi"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/50 hover:text-[#D4AF37] hover:bg-[#D4AF37]/10 transition-all"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@DoutoraRaquelRinaldi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/50 hover:text-[#D4AF37] hover:bg-[#D4AF37]/10 transition-all"
+                aria-label="YouTube"
+              >
+                <Youtube size={18} />
+              </a>
+              <a
+                href="https://www.facebook.com/professoraraquelrinaldi"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/50 hover:text-[#D4AF37] hover:bg-[#D4AF37]/10 transition-all"
                 aria-label="Facebook"
               >

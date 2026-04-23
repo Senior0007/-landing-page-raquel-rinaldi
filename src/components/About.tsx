@@ -3,10 +3,10 @@ import { CheckCircle2, Scale, Users, TrendingUp } from 'lucide-react';
 import { COMPANY_INFO } from '../lib/constants';
 
 const differentials = [
-  { icon: Scale, title: 'Especialização Única', description: 'Foco exclusivo em direito previdenciário há mais de 15 anos.' },
-  { icon: Users, title: 'Atendimento Humanizado', description: 'Cada caso é único. Tratamos você como pessoa, não como número.' },
+  { icon: Scale, title: 'Foco no Previdenciário', description: 'Especialização exclusiva em Direito Previdenciário, com mais de 15 anos de atuação dedicada.' },
+  { icon: Users, title: 'Você é único', description: 'Atendimento personalizado e individualizado, e você é tratado com a atenção que merece.' },
   { icon: TrendingUp, title: 'Alta Taxa de Sucesso', description: 'Mais de 98% dos nossos clientes alcançam resultados positivos.' },
-  { icon: CheckCircle2, title: 'Transparência Total', description: 'Sem custos ocultos. Você só paga se ganhar (condições especiais).' },
+  { icon: CheckCircle2, title: 'Transparência total', description: 'Custos e estratégia definidos desde o início, com alinhamento claro com o cliente.' },
 ];
 
 export default function About() {
@@ -38,12 +38,12 @@ export default function About() {
               {/* Main image container */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/5">
                 <img
-                  src="/uploads/upload_1.jpg"
+                  src="/images/RAQUEL ESCRITORIO 4.JPG"
                   alt={`Dra. ${COMPANY_INFO.name} - Especialista em Direito Previdenciário`}
-                  className="w-full h-[500px] object-cover object-top"
+                  className="w-full h-[850px] object-cover object-top"
                   loading="lazy"
                   width="550"
-                  height="650"
+                  height="850"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/40 to-transparent" />
               </div>
@@ -83,13 +83,10 @@ export default function About() {
             </h2>
             
             <p className="text-lg text-white/65 mb-8 leading-relaxed font-[family-name:var(--font-body)]">
-              Sou a Dra. {COMPANY_INFO.name.split(' ')[1] || 'Patrícia'}, advogada especializada em direito 
-              previdenciário com atuação nacional. Minha missão é garantir que cada cliente 
-              receba exatamente o que tem direito após anos de trabalho.
+              Sou a Dra. Raquel Rinaldi, advogada especializada em Direito Previdenciário com atuação em todo o Brasil. Minha missão é assegurar que cada cliente receba exatamente o que tem direito após anos de trabalho.
             </p>
             <p className="text-lg text-white/65 mb-10 leading-relaxed font-[family-name:var(--font-body)]">
-              Com mais de {COMPANY_INFO.yearsExperience} anos de experiência e milhares de casos bem-sucedidos, 
-              construí uma reputação baseada em resultados reais e atendimento humanizado.
+              Com mais de 15 anos de experiência e centenas de casos bem-sucedidos, construí uma trajetória pautada em resultados concretos, confiança e atendimento humanizado.
             </p>
 
             {/* Differentials grid */}

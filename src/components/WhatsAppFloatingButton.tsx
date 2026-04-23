@@ -47,7 +47,7 @@ export default function WhatsAppFloatingButton() {
         transition={{ delay: 1.5, type: 'spring', stiffness: 260, damping: 20 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="pulse-whatsapp relative w-16 h-16 rounded-full bg-gradient-to-br from-[#25d366] to-[#128c7e] flex items-center justify-center shadow-[0_0_30px_rgba(37,211,102,0.4)] hover:shadow-[0_0_50px_rgba(37,211,102,0.6)] transition-shadow duration-300 focus-visible:ring-4 focus-visible:ring-[#25d366] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a1628]"
+        className="pulse-whatsapp relative w-16 h-16 rounded-full bg-gradient-to-br from-[#1e40af] to-[#1d4ed8] flex items-center justify-center shadow-[0_0_30px_rgba(30,64,175,0.4)] hover:shadow-[0_0_50px_rgba(30,64,175,0.6)] transition-shadow duration-300 focus-visible:ring-4 focus-visible:ring-[#1e40af] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a1628]"
         aria-label="Fale conosco pelo WhatsApp"
       >
         <MessageCircle size={30} className="text-white" fill="white" />

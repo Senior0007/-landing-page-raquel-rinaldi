@@ -62,7 +62,7 @@ export default function FinalCTA() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-[#25d366] to-[#128c7e] text-white font-bold text-xl rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(37,211,102,0.4)] focus-visible:ring-4 focus-visible:ring-[#25d366] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a1628]"
+              className="group relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-[#1e40af] to-[#1d4ed8] text-white font-bold text-xl rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_50px_rgba(30,64,175,0.4)] focus-visible:ring-4 focus-visible:ring-[#1e40af] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a1628]"
               aria-label="Iniciar conversa no WhatsApp"
             >
               <Phone size={24} className="group-hover:animate-bounce" />
@@ -86,7 +86,7 @@ export default function FinalCTA() {
             </div>
             <div className="flex items-center gap-2">
               <Clock size={18} className="text-[#D4AF37]" />
-              <span className="text-sm">Resposta em até 2 horas</span>
+              <span className="text-sm">Resposta ágil</span>
             </div>
             <div className="flex items-center gap-2">
               <Phone size={18} className="text-[#D4AF37]" />

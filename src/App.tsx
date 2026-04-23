@@ -12,6 +12,7 @@ import WhatsAppFloatingButton from './components/WhatsAppFloatingButton';
 export default function App() {
   return (
     <main>
+      <Navbar />
       <Hero />
       <Stats />
       <About />
@@ -19,6 +20,8 @@ export default function App() {
       <HowItWorks />
       <Testimonials />
       <FinalCTA />
+      <Footer />
+      <WhatsAppFloatingButton />
     </main>
   );
 }

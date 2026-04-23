@@ -3,26 +3,29 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Float, Sphere, MeshDistortMaterial } from '@react-three/drei';
 import * as THREE from 'three';
 
+// Generate random particles data outside of component
+function generateParticleData(count: number) {
+  const positions = new Float32Array(count * 3);
+  const colors = new Float32Array(count * 3);
+  
+  for (let i = 0; i < count; i++) {
+    positions[i * 3] = (Math.random() - 0.5) * 15;
+    positions[i * 3 + 1] = (Math.random() - 0.5) * 15;
+    positions[i * 3 + 2] = (Math.random() - 0.5) * 15;
+    
+    // Gold color variations
+    colors[i * 3] = 0.83 + Math.random() * 0.17;     // R
+    colors[i * 3 + 1] = 0.68 + Math.random() * 0.2;   // G
+    colors[i * 3 + 2] = 0.21 + Math.random() * 0.1;   // B
+  }
+  
+  return { positions, colors };
+}
+
 function Particles({ count = 200 }) {
   const mesh = useRef<THREE.Points>(null!);
   
-  const particles = useMemo(() => {
-    const positions = new Float32Array(count * 3);
-    const colors = new Float32Array(count * 3);
-    
-    for (let i = 0; i < count; i++) {
-      positions[i * 3] = (Math.random() - 0.5) * 15;
-      positions[i * 3 + 1] = (Math.random() - 0.5) * 15;
-      positions[i * 3 + 2] = (Math.random() - 0.5) * 15;
-      
-      // Gold color variations
-      colors[i * 3] = 0.83 + Math.random() * 0.17;     // R
-      colors[i * 3 + 1] = 0.68 + Math.random() * 0.2;   // G
-      colors[i * 3 + 2] = 0.21 + Math.random() * 0.1;   // B
-    }
-    
-    return { positions, colors };
-  }, [count]);
+  const particles = useMemo(() => generateParticleData(count), [count]);
 
   useFrame((state) => {
     if (mesh.current) {
