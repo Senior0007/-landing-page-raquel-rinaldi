@@ -77,20 +77,6 @@ export default function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Navegação principal">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a 
-            href="/" 
-            onClick={handleLogoClick}
-            className="flex items-center gap-3 group" 
-            aria-label="Página inicial"
-          >
-            <img 
-              src="/logo-branca.png" 
-              alt="Raquel Rinaldi Advocacia" 
-              className="h-16 sm:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-            />
-          </a>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (

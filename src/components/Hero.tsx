@@ -114,12 +114,6 @@ export default function Hero() {
                 </span>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </a>
-              <a
-                href="#como-funciona"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white font-semibold text-lg rounded-full hover:bg-white/5 hover:border-[#D4AF37]/40 transition-all duration-300"
-              >
-                Como Funciona
-              </a>
             </motion.div>
 
             {/* Trust Badges */}
