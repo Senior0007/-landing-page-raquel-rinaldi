@@ -206,10 +206,10 @@ export const TESTIMONIALS = [
 
 // Stats Data
 export const STATS = [
-  { value: 2500, suffix: '+', label: 'Casos Ganhos', prefix: '' },
+  { value: 447, suffix: '', label: 'Casos Ganhos', prefix: '' },
   { value: 98, suffix: '%', label: 'Clientes Satisfeitos', prefix: '' },
   { value: 15, suffix: '', label: 'Anos de Experiência', prefix: '' },
-  { value: 500, suffix: '+', label: 'Cidades Atendidas', prefix: '' },
+  { value: 137, suffix: '', label: 'Cidades Atendidas', prefix: '' },
 ];
 
 // Target Audience

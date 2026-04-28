@@ -180,7 +180,7 @@ export default function ServicePage() {
                     <div className="w-6 h-6 rounded-full bg-[#D4AF37]/20 flex items-center justify-center flex-shrink-0 mt-1">
                       <Check size={14} className="text-[#D4AF37]" />
                     </div>
-                    <p className="text-white/80">{question}</p>
+                    <p className="text-lg text-white/80 leading-relaxed">{question}</p>
                   </motion.div>
                 ))}
               </div>

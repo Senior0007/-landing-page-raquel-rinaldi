@@ -63,7 +63,7 @@ export const servicesData: ServiceDetail[] = [
     subtitle: 'Planejamento Estratégico para Maximizar Seu Benefício',
     headline: 'Garanta a Aposentadoria que Você Merece',
     subheadline: 'Planejamento jurídico especializado para você receber o máximo valor possível do INSS',
-    image: '/uploads/upload_1.jpg',
+    image: '/images/serviços/RAQUEL ESCRITORIO 4.JPG',
     imageAlt: 'Dra. Raquel Rinaldi - Especialista em Aposentadoria Previdenciária',
     
     painPoints: {
@@ -168,7 +168,7 @@ export const servicesData: ServiceDetail[] = [
     subtitle: 'Benefício de Prestação Continuada para Quem Mais Precisa',
     headline: 'Você Tem Direito ao BPC/LOAS?',
     subheadline: 'Benefício de um salário mínimo mensal para idosos 65+ e pessoas com deficiência de baixa renda',
-    image: '/images/raquel-2.jpg',
+    image: '/images/serviços/RAQUEL ESCRITORIO 5.JPG',
     imageAlt: 'Dra. Raquel Rinaldi - Especialista em BPC/LOAS',
     
     painPoints: {
@@ -272,7 +272,7 @@ export const servicesData: ServiceDetail[] = [
     subtitle: 'Corrija Erros e Receba o Valor Justo',
     headline: 'Seu benefício pode estar sendo calculado de forma incorreta — e isso pode impactar diretamente o valor que você recebe',
     subheadline: 'Milhares de brasileiros recebem menos do que deveriam. Revisamos e corrigimos para garantir o valor justo, com pagamento de retroativos.',
-    image: '/images/RAQUEL ESCRITORIO 8.JPG',
+    image: '/images/serviços/RAQUEL ESCRITORIO 7.JPG',
     imageAlt: 'Dra. Raquel Rinaldi - Especialista em Revisão de Benefícios Previdenciários',
     
     painPoints: {
@@ -375,7 +375,7 @@ export const servicesData: ServiceDetail[] = [
     subtitle: 'Proteção Quando Você Mais Precisa',
     headline: 'Garanta os Auxílios que São Seus por Direito',
     subheadline: 'Auxílio-Doença, Salário-Maternidade, Pensão por Morte e mais. Acompanhamento completo do início ao fim.',
-    image: '/images/raquel-4.jpg',
+    image: '/images/serviços/RAQUEL ESCRITORIO 6.JPG',
     imageAlt: 'Dra. Raquel Rinaldi - Especialista em Auxílios e Benefícios Previdenciários',
     
     painPoints: {
@@ -479,7 +479,7 @@ export const servicesData: ServiceDetail[] = [
     subtitle: 'Estratégia Personalizada para Seu Futuro',
     headline: 'Planeje Hoje, Garanta Seu Futuro',
     subheadline: 'Análise estratégica do seu caso para definir o melhor momento de se aposentar e maximizar seus benefícios.',
-    image: '/images/raquel-5.jpg',
+    image: '/images/serviços/RAQUEL ESCRITORIO 9.JPG',
     imageAlt: 'Dra. Raquel Rinaldi - Especialista em Planejamento Previdenciário',
     
     painPoints: {
@@ -583,7 +583,7 @@ export const servicesData: ServiceDetail[] = [
     subtitle: 'Defenda Seus Direitos com Expertise Jurídica',
     headline: 'Seu Benefício Foi Negado? Vamos Reverter',
     subheadline: 'Contestação de decisões administrativas e judiciais desfavoráveis. Defendemos seus direitos perante INSS e Justiça.',
-    image: '/images/raquel-6.jpg',
+    image: '/images/serviços/RAQUEL ESCRITORIO 8.JPG',
     imageAlt: 'Dra. Raquel Rinaldi - Especialista em Contestações e Recursos Previdenciários',
     
     painPoints: {
