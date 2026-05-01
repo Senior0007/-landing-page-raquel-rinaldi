@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App.tsx'
 import ServicePage from './pages/ServicePage.tsx'
+import CurriculumPage from './pages/CurriculumPage.tsx'
 import Navbar from './components/Navbar.tsx'
 import Footer from './components/Footer.tsx'
 import WhatsAppFloatingButton from './components/WhatsAppFloatingButton.tsx'
@@ -16,6 +17,7 @@ createRoot(document.getElementById('root')!).render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/servicos/:slug" element={<ServicePage />} />
+          <Route path="/curriculo" element={<CurriculumPage />} />
         </Routes>
         <Footer />
         <WhatsAppFloatingButton />

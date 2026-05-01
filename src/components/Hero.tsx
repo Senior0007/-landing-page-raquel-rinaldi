@@ -150,7 +150,7 @@ export default function Hero() {
               {/* Image container */}
               <div className="relative bg-transparent rounded-3xl overflow-hidden border border-[#D4AF37]/20 shadow-2xl min-h-[350px]">
                 <img
-                  src="/images/2.png"
+                  src="images\FOTO WORKANA 1 (SEM FUNDO).png"
                   alt={`Dra. Raquel Rinaldi - Especialista em Direito Previdenciário com ${COMPANY_INFO.yearsExperience} anos de experiência, Doutora em Direito e Professora`}
                   className="w-full h-full object-cover object-center-top block"
                   loading="eager"

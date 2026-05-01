@@ -38,7 +38,7 @@ export default function About() {
               {/* Main image container */}
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/5">
                 <img
-                  src="/images/RAQUEL ESCRITORIO 4.JPG"
+                  src="/images/serviços/RAQUEL ESCRITORIO 3 (envio para landing)1.jpg"
                   alt={`Dra. ${COMPANY_INFO.name} - Especialista em Direito Previdenciário`}
                   className="w-full h-[850px] object-cover object-top"
                   loading="lazy"

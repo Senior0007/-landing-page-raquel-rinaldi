@@ -1,13 +1,19 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone } from 'lucide-react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { WHATSAPP_URL } from '../lib/constants';
 
-const navLinks = [
+interface NavLink {
+  href: string;
+  label: string;
+  isRoute?: boolean;
+}
+
+const navLinks: NavLink[] = [
   { href: '#servicos', label: 'Serviços' },
   { href: '#sobre', label: 'Sobre' },
-  { href: '#como-funciona', label: 'Como Funciona' },
+  { href: '/curriculo', label: 'Currículo', isRoute: true },
   { href: '#depoimentos', label: 'Depoimentos' },
   { href: '#contato', label: 'Contato' },
 ];
@@ -32,9 +38,16 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ''; };
   }, [isMobileOpen]);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, isRoute?: boolean) => {
     e.preventDefault();
     setIsMobileOpen(false);
+    
+    // Se for uma rota, navegar diretamente
+    if (isRoute) {
+      navigate(href);
+      setTimeout(() => window.scrollTo(0, 0), 100);
+      return;
+    }
     
     // Se não estiver na home, navegar para home primeiro
     if (location.pathname !== '/') {
@@ -80,14 +93,25 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={(e) => handleNavClick(e, link.href)}
-                className="relative text-sm font-medium text-white/80 hover:text-white transition-colors duration-300 after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#D4AF37] after:transition-all hover:after:w-full"
-              >
-                {link.label}
-              </a>
+              link.isRoute ? (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  onClick={() => { setIsMobileOpen(false); window.scrollTo(0, 0); }}
+                  className="relative text-sm font-medium text-white/80 hover:text-white transition-colors duration-300 after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#D4AF37] after:transition-all hover:after:w-full"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href, link.isRoute)}
+                  className="relative text-sm font-medium text-white/80 hover:text-white transition-colors duration-300 after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-[#D4AF37] after:transition-all hover:after:w-full"
+                >
+                  {link.label}
+                </a>
+              )
             ))}
           </div>
 
@@ -142,17 +166,34 @@ export default function Navbar() {
             >
               <div className="p-6 space-y-4">
                 {navLinks.map((link, index) => (
-                  <motion.a
-                    key={link.href}
-                    href={link.href}
-                    onClick={(e) => handleNavClick(e, link.href)}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                    className="block text-lg font-medium text-white/90 hover:text-[#D4AF37] py-2 transition-colors"
-                  >
-                    {link.label}
-                  </motion.a>
+                  link.isRoute ? (
+                    <motion.div
+                      key={link.href}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                    >
+                      <Link
+                        to={link.href}
+                        onClick={() => { setIsMobileOpen(false); window.scrollTo(0, 0); }}
+                        className="block text-lg font-medium text-white/90 hover:text-[#D4AF37] py-2 transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    </motion.div>
+                  ) : (
+                    <motion.a
+                      key={link.href}
+                      href={link.href}
+                      onClick={(e) => handleNavClick(e, link.href, link.isRoute)}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                      className="block text-lg font-medium text-white/90 hover:text-[#D4AF37] py-2 transition-colors"
+                    >
+                      {link.label}
+                    </motion.a>
+                  )
                 ))}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}

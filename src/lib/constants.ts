@@ -13,7 +13,7 @@ export const COMPANY_INFO = {
   shortName: 'Raquel Rinaldi Advocacia',
   oab: 'OAB/RJ 147.852',
   phone: '+55 21 99487-7080',
-  email: 'contato@raquelrinaldiadvocacia.com.br',
+  email: 'raquel.rinaldi@yahoo.com.br',
   address: 'Rio de Janeiro, RJ - Atendimento Nacional',
   yearsExperience: 15,
   casesWon: 2500,
