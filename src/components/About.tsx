@@ -42,6 +42,7 @@ export default function About() {
                   alt={`Dra. ${COMPANY_INFO.name} - Especialista em Direito Previdenciário`}
                   className="w-full h-[850px] object-cover object-top"
                   loading="lazy"
+                  decoding="async"
                   width="550"
                   height="850"
                 />

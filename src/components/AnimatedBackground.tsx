@@ -7,7 +7,7 @@ export default function AnimatedBackground() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d', { alpha: true });
     if (!ctx) return;
 
     // Set canvas size
@@ -18,7 +18,7 @@ export default function AnimatedBackground() {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Particles
+    // Reduzir número de partículas para melhor performance
     const particles: Array<{
       x: number;
       y: number;
@@ -27,7 +27,8 @@ export default function AnimatedBackground() {
       size: number;
     }> = [];
 
-    for (let i = 0; i < 50; i++) {
+    // Reduzido de 50 para 30 partículas
+    for (let i = 0; i < 30; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -37,8 +38,22 @@ export default function AnimatedBackground() {
       });
     }
 
-    // Animation
-    const animate = () => {
+    let animationFrameId: number;
+    let lastTime = 0;
+    const fps = 30; // Limitar a 30 FPS para economizar recursos
+    const fpsInterval = 1000 / fps;
+
+    // Animation com throttling
+    const animate = (currentTime: number) => {
+      animationFrameId = requestAnimationFrame(animate);
+      
+      const elapsed = currentTime - lastTime;
+      
+      // Só renderizar se passou tempo suficiente
+      if (elapsed < fpsInterval) return;
+      
+      lastTime = currentTime - (elapsed % fpsInterval);
+
       ctx.fillStyle = 'rgba(10, 22, 40, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -55,30 +70,29 @@ export default function AnimatedBackground() {
         ctx.fillStyle = 'rgba(59, 130, 246, 0.5)';
         ctx.fill();
 
-        // Draw connections
+        // Draw connections - reduzir distância para menos cálculos
         particles.slice(i + 1).forEach(otherParticle => {
           const dx = particle.x - otherParticle.x;
           const dy = particle.y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 150) {
+          if (distance < 120) { // Reduzido de 150 para 120
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = `rgba(59, 130, 246, ${0.2 * (1 - distance / 150)})`;
+            ctx.strokeStyle = `rgba(59, 130, 246, ${0.2 * (1 - distance / 120)})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
         });
       });
-
-      requestAnimationFrame(animate);
     };
 
-    animate();
+    animate(0);
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
+      cancelAnimationFrame(animationFrameId);
     };
   }, []);
 

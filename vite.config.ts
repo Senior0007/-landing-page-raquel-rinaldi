@@ -6,7 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   build: {
-    // Otimizações para build mais rápido
     target: 'esnext',
     minify: 'esbuild',
     sourcemap: false,
@@ -17,19 +16,22 @@ export default defineConfig({
           vendor: ['react', 'react-dom'],
           motion: ['framer-motion'],
           router: ['react-router-dom'],
+          // Three.js em chunk separado (muito pesado)
+          three: ['three', '@react-three/fiber', '@react-three/drei'],
         }
       }
     },
-    // Reduzir warnings de chunk size
-    chunkSizeWarningLimit: 1000
+    chunkSizeWarningLimit: 1000,
+    // Comprimir assets
+    assetsInlineLimit: 4096,
   },
-  // Otimizações para desenvolvimento
   server: {
     hmr: true,
     host: true
   },
-  // Otimizar dependências
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'react-router-dom']
+    include: ['react', 'react-dom', 'framer-motion', 'react-router-dom'],
+    // Excluir Three.js do pre-bundling para lazy load
+    exclude: ['three', '@react-three/fiber', '@react-three/drei']
   }
 })

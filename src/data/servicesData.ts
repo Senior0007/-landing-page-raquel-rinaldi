@@ -272,7 +272,7 @@ export const servicesData: ServiceDetail[] = [
     subtitle: 'Corrija Erros e Receba o Valor Justo',
     headline: 'Seu benefício pode estar sendo calculado de forma incorreta — e isso pode impactar diretamente o valor que você recebe',
     subheadline: 'Milhares de brasileiros recebem menos do que deveriam. Revisamos e corrigimos para garantir o valor justo, com pagamento de retroativos.',
-    image: '/images/serviços/RAQUEL ESCRITORIO 7.JPG',
+    image: '/images/serviços/revisão .jpeg',
     imageAlt: 'Dra. Raquel Rinaldi - Especialista em Revisão de Benefícios Previdenciários',
     
     painPoints: {

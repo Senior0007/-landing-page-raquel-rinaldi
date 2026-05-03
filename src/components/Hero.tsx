@@ -1,9 +1,12 @@
 import { motion, type Variants } from 'framer-motion';
 import { ArrowRight, Shield, Award, Clock, Sparkles } from 'lucide-react';
-import HeroScene from './HeroScene';
-import AnimatedBackground from './AnimatedBackground';
+import { lazy, Suspense } from 'react';
 import GradientText from './GradientText';
 import { WHATSAPP_URL, COMPANY_INFO } from '../lib/constants';
+
+// Lazy load componentes pesados
+const HeroScene = lazy(() => import('./HeroScene'));
+const AnimatedBackground = lazy(() => import('./AnimatedBackground'));
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -37,11 +40,15 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(212,175,55,0.12)_0%,_transparent_60%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(26,53,104,0.3)_0%,_transparent_60%)]" />
       
-      {/* Animated Background */}
-      <AnimatedBackground />
+      {/* Animated Background - Lazy loaded */}
+      <Suspense fallback={null}>
+        <AnimatedBackground />
+      </Suspense>
       
-      {/* 3D Scene */}
-      <HeroScene />
+      {/* 3D Scene - Lazy loaded */}
+      <Suspense fallback={null}>
+        <HeroScene />
+      </Suspense>
       
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 w-full">
@@ -63,6 +70,9 @@ export default function Hero() {
                 alt="Raquel Rinaldi Advocacia - Logo"
                 className="h-56 sm:h-64 lg:h-72 xl:h-80 2xl:h-96 mx-auto lg:mx-0 object-contain drop-shadow-2xl"
                 loading="eager"
+                fetchPriority="high"
+                width="400"
+                height="384"
               />
             </motion.div>
 
@@ -150,10 +160,13 @@ export default function Hero() {
               {/* Image container */}
               <div className="relative bg-transparent rounded-3xl overflow-hidden border border-[#D4AF37]/20 shadow-2xl min-h-[350px]">
                 <img
-                  src="images\FOTO WORKANA 1 (SEM FUNDO).png"
+                  src="/images/serviços/6.png"
                   alt={`Dra. Raquel Rinaldi - Especialista em Direito Previdenciário com ${COMPANY_INFO.yearsExperience} anos de experiência, Doutora em Direito e Professora`}
                   className="w-full h-full object-cover object-center-top block"
-                  loading="eager"
+                  loading="lazy"
+                  decoding="async"
+                  width="600"
+                  height="800"
                 />
                 
                 {/* Floating card */}

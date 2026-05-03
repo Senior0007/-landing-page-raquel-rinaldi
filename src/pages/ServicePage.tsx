@@ -99,7 +99,10 @@ export default function ServicePage() {
                   src={service.image}
                   alt={service.imageAlt}
                   className="w-full h-auto object-cover"
-                  loading="eager"
+                  loading="lazy"
+                  decoding="async"
+                  width="600"
+                  height="400"
                   onError={(e) => {
                     console.error('Image failed to load:', service.image);
                     e.currentTarget.src = '/uploads/raquel-hero.jpg';
@@ -142,7 +145,10 @@ export default function ServicePage() {
                     src={service.image}
                     alt={service.imageAlt}
                     className="w-full h-auto object-cover min-h-[500px]"
-                    loading="eager"
+                    loading="lazy"
+                    decoding="async"
+                    width="700"
+                    height="500"
                     onError={(e) => {
                       console.error('Image failed to load:', service.image);
                       e.currentTarget.src = '/uploads/raquel-hero.jpg';

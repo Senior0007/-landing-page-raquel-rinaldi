@@ -31,8 +31,18 @@ const experiences = [
 const education = [
   {
     degree: 'Doutora e Mestre em Direito',
-    institution: 'UERJ',
+    institution: 'Universidade do Estado do Rio de Janeiro (UERJ)',
     focus: 'Teoria e Filosofia do Direito'
+  },
+  {
+    degree: 'Graduada em Direito',
+    institution: 'Universidade Federal do Rio de Janeiro (UFRJ)',
+    focus: ''
+  },
+  {
+    degree: 'Pós-Graduação em Prática Previdenciária',
+    institution: 'Administrativa e Judicial',
+    focus: ''
   },
   {
     degree: 'Especialização em Direito Digital',
@@ -106,7 +116,7 @@ export default function CurriculumPage() {
               <GraduationCap className="text-[#D4AF37]" size={32} />
               Formação Acadêmica
             </h2>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {education.map((edu, index) => (
                 <FloatingCard key={index} delay={index * 0.1}>
                   <GlassCard className="p-6 h-full">

@@ -22,7 +22,7 @@ function generateParticleData(count: number) {
   return { positions, colors };
 }
 
-function Particles({ count = 200 }) {
+function Particles({ count = 100 }) { // Reduzido de 200 para 100
   const mesh = useRef<THREE.Points>(null!);
   
   const particles = useMemo(() => generateParticleData(count), [count]);
@@ -62,7 +62,7 @@ function Particles({ count = 200 }) {
 function GoldenSphere() {
   return (
     <Float speed={2} rotationIntensity={0.5} floatIntensity={1}>
-      <Sphere args={[1.2, 64, 64]} position={[2.5, 0.5, -1]}>
+      <Sphere args={[1.2, 32, 32]} position={[2.5, 0.5, -1]}> {/* Reduzido de 64,64 para 32,32 */}
         <MeshDistortMaterial
           color="#D4AF37"
           attach="material"
@@ -80,7 +80,7 @@ function GoldenSphere() {
 function GlowOrb({ position, color }: { position: [number, number, number]; color: string }) {
   return (
     <Float speed={1.5} rotationIntensity={0.3} floatIntensity={0.8}>
-      <Sphere args={[0.4, 32, 32]} position={position}>
+      <Sphere args={[0.4, 16, 16]} position={position}> {/* Reduzido de 32,32 para 16,16 */}
         <meshBasicMaterial
           color={color}
           transparent
@@ -96,15 +96,21 @@ export default function HeroScene() {
     <div className="absolute inset-0 z-0" aria-hidden="true">
       <Canvas
         camera={{ position: [0, 0, 5], fov: 60 }}
-        dpr={[1, 1.5]}
-        gl={{ antialias: true, alpha: true }}
+        dpr={[1, 1.5]} // Limitar pixel ratio
+        gl={{ 
+          antialias: false, // Desabilitar antialiasing para melhor performance
+          alpha: true,
+          powerPreference: 'high-performance', // Priorizar performance
+        }}
         style={{ background: 'transparent' }}
+        frameloop="demand" // Renderizar apenas quando necessário
+        performance={{ min: 0.5 }} // Ajustar qualidade automaticamente
       >
         <ambientLight intensity={0.3} />
         <directionalLight position={[5, 5, 5]} intensity={0.8} color="#f4e4ba" />
         <pointLight position={[-3, 2, -2]} intensity={0.5} color="#D4AF37}" />
         
-        <Particles count={150} />
+        <Particles count={100} /> {/* Reduzido de 150 para 100 */}
         <GoldenSphere />
         <GlowOrb position={[-2.5, -1, -2]} color="#D4AF37" />
         <GlowOrb position={[3, 2, -3]} color="#f4e4ba" />

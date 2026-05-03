@@ -1,21 +1,45 @@
-import Hero from './components/Hero';
-import Stats from './components/Stats';
-import About from './components/About';
-import Services from './components/Services';
-import HowItWorks from './components/HowItWorks';
-import Testimonials from './components/Testimonials';
-import FinalCTA from './components/FinalCTA';
+import { lazy, Suspense } from 'react';
+
+// Lazy load componentes não críticos
+const Hero = lazy(() => import('./components/Hero'));
+const Stats = lazy(() => import('./components/Stats'));
+const About = lazy(() => import('./components/About'));
+const Services = lazy(() => import('./components/Services'));
+const HowItWorks = lazy(() => import('./components/HowItWorks'));
+const Testimonials = lazy(() => import('./components/Testimonials'));
+const FinalCTA = lazy(() => import('./components/FinalCTA'));
+
+// Loading fallback simples
+const LoadingFallback = () => (
+  <div className="min-h-screen flex items-center justify-center bg-[#0a1628]">
+    <div className="w-12 h-12 border-4 border-[#D4AF37] border-t-transparent rounded-full animate-spin" />
+  </div>
+);
 
 export default function App() {
   return (
     <main>
-      <Hero />
-      <Stats />
-      <About />
-      <Services />
-      <HowItWorks />
-      <Testimonials />
-      <FinalCTA />
+      <Suspense fallback={<LoadingFallback />}>
+        <Hero />
+      </Suspense>
+      <Suspense fallback={null}>
+        <Stats />
+      </Suspense>
+      <Suspense fallback={null}>
+        <About />
+      </Suspense>
+      <Suspense fallback={null}>
+        <Services />
+      </Suspense>
+      <Suspense fallback={null}>
+        <HowItWorks />
+      </Suspense>
+      <Suspense fallback={null}>
+        <Testimonials />
+      </Suspense>
+      <Suspense fallback={null}>
+        <FinalCTA />
+      </Suspense>
     </main>
   );
 }
