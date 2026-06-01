@@ -90,15 +90,15 @@ export default function Hero() {
               variants={itemVariants}
               className="text-4xl sm:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-[1.08] mb-6 font-[family-name:var(--font-display)]"
             >
-              <span className="text-white">Seus direitos</span>
+              <span className="text-white">SEUS</span>
               <br />
               <GradientText gradient="from-[#D4AF37] via-[#FFD700] to-[#D4AF37]">
-                previdenciários
+                DIREITOS
               </GradientText>
               <br />
-              <span className="text-white">merecem ser</span>
+              <span className="text-white">MERECEM SER</span>
               <br />
-              <span className="text-white">respeitados.</span>
+              <span className="text-white">RESPEITADOS</span>
             </motion.h1>
 
             {/* Subheadline */}
@@ -106,7 +106,7 @@ export default function Hero() {
               variants={itemVariants}
               className="text-lg sm:text-xl text-white/70 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed font-[family-name:var(--font-body)]"
             >
-              Garantindo aposentadorias dignas e o acesso a benefícios previdenciários para quem realmente precisa.
+              Garantindo a dignidade e o respeito com a proteção dos direitos de quem realmente precisa.
             </motion.p>
 
             {/* CTA Buttons */}

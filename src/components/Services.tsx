@@ -48,8 +48,7 @@ export default function Services() {
             </GradientText>
           </h2>
           <p className="text-lg text-white/60 leading-relaxed">
-            Oferecemos assessoria completa em todas as áreas do direito previdenciário, 
-            com estratégias personalizadas para cada situação.
+            Oferecemos assessoria completa para as seguintes áreas do direito:
           </p>
         </motion.div>
 

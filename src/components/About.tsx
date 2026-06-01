@@ -4,7 +4,7 @@ import { COMPANY_INFO } from '../lib/constants';
 
 const differentials = [
   { icon: Scale, title: 'Foco no Previdenciário', description: 'Especialização exclusiva em Direito Previdenciário, com mais de 15 anos de atuação dedicada.' },
-  { icon: Users, title: 'Você é único', description: 'Atendimento personalizado e individualizado, e você é tratado com a atenção que merece.' },
+  { icon: Users, title: 'Direitos dos autistas', description: 'Especialização nos direitos autistas, nas mais diversas áreas como saúde, previdência, financeira, educação, tributos e transporte.' },
   { icon: TrendingUp, title: 'Alta Taxa de Sucesso', description: 'Mais de 98% dos nossos clientes alcançam resultados positivos.' },
   { icon: CheckCircle2, title: 'Transparência total', description: 'Custos e estratégia definidos desde o início, com alinhamento claro com o cliente.' },
 ];
@@ -80,11 +80,11 @@ export default function About() {
             
             <h2 className="text-3xl sm:text-4xl xl:text-5xl font-bold text-white mb-6 leading-tight font-[family-name:var(--font-display)]">
               Autoridade em{' '}
-              <span className="text-gradient-gold">Direito Previdenciário</span>
+              <span className="text-gradient-gold">Direito</span>
             </h2>
             
             <p className="text-lg text-white/65 mb-8 leading-relaxed font-[family-name:var(--font-body)]">
-              Sou a Dra. Raquel Rinaldi, advogada especializada em Direito Previdenciário com atuação em todo o Brasil. Minha missão é assegurar que cada cliente receba exatamente o que tem direito após anos de trabalho.
+              Sou a Dra. Raquel Rinaldi, advogada especializada em Direito Previdenciário com atuação em todo o Brasil, e criadora do Programa de Direitos TEA, com foco no núcleo de direitos do autista. Minha missão é assegurar que cada cliente receba exatamente o que tem direito, com dignidade e respeito.
             </p>
             <p className="text-lg text-white/65 mb-10 leading-relaxed font-[family-name:var(--font-body)]">
               Com mais de 15 anos de experiência e centenas de casos bem-sucedidos, construí uma trajetória pautada em resultados concretos, confiança e atendimento humanizado.

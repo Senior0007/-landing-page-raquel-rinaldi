@@ -98,7 +98,7 @@ export default function ServicePage() {
                 <img
                   src={service.image}
                   alt={service.imageAlt}
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto block rounded-2xl"
                   loading="lazy"
                   decoding="async"
                   width="600"
@@ -144,7 +144,7 @@ export default function ServicePage() {
                   <img
                     src={service.image}
                     alt={service.imageAlt}
-                    className="w-full h-auto object-cover min-h-[500px]"
+                    className="w-full h-auto block rounded-3xl"
                     loading="lazy"
                     decoding="async"
                     width="700"

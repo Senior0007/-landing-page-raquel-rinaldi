@@ -30,8 +30,15 @@ export default defineConfig({
     host: true
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'react-router-dom'],
-    // Excluir Three.js do pre-bundling para lazy load
-    exclude: ['three', '@react-three/fiber', '@react-three/drei']
+    include: [
+      'react',
+      'react-dom',
+      'framer-motion',
+      'react-router-dom',
+      'three',
+      '@react-three/fiber',
+      '@react-three/drei',
+      'use-sync-external-store/shim/with-selector'
+    ]
   }
 })

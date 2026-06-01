@@ -107,15 +107,15 @@ export const SERVICES = [
   },
   {
     id: 6,
-    title: 'Contestações e Recursos',
-    description: 'Contestação de decisões administrativas e judiciais desfavoráveis, defendendo seus direitos perante os órgãos competentes.',
-    icon: 'clock',
+    title: 'Especialização em atendimento TEA',
+    description: 'Atuação jurídica focada exclusivamente nos direitos das pessoas autistas e de suas famílias, com domínio da legislação inclusiva, saúde, educação, previdência, tributos e acessibilidade.',
+    icon: 'heart',
     details: [
-      'Recursos administrativos',
-      'Recursos judiciais',
-      'Contestação de negativas',
-      'Defesa de direitos',
-      'Acompanhamento processual'
+      'Inclusão Escolar e Mediador',
+      'Negativas de Planos de Saúde (Terapias ABA)',
+      'BPC/LOAS para Autistas',
+      'Isenções e Direitos Financeiros',
+      'Previdência e Segurança Familiar TEA'
     ]
   },
 ] as const;

@@ -11,7 +11,7 @@ const footerLinks = {
     { label: 'Planejamento Previdenciário', href: '/servicos/planejamento-previdenciario' },
     { label: 'Salário-Maternidade', href: '/servicos/auxilios-e-beneficios' },
     { label: 'Pensão por Morte', href: '/servicos/auxilios-e-beneficios' },
-    { label: 'Contestações e Recursos', href: '/servicos/contestacoes-e-recursos' },
+    { label: 'Direitos dos Autistas (TEA)', href: '/servicos/especializacao-em-atendimento-tea' },
   ],
   empresa: [
     { label: 'Sobre', href: '#sobre' },

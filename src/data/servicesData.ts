@@ -576,109 +576,109 @@ export const servicesData: ServiceDetail[] = [
     
     whatsappMessage: 'Olá Dra. Raquel, gostaria de fazer um planejamento previdenciário.'
   },
-
   {
-    slug: 'contestacoes-e-recursos',
-    title: 'Contestações e Recursos',
-    subtitle: 'Defenda Seus Direitos com Expertise Jurídica',
-    headline: 'Seu Benefício Foi Negado? Vamos Reverter',
-    subheadline: 'Contestação de decisões administrativas e judiciais desfavoráveis. Defendemos seus direitos perante INSS e Justiça.',
-    image: '/images/serviços/RAQUEL ESCRITORIO 8.JPG',
-    imageAlt: 'Dra. Raquel Rinaldi - Especialista em Contestações e Recursos Previdenciários',
+    slug: 'especializacao-em-atendimento-tea',
+    title: 'Especialização em atendimento TEA',
+    subtitle: 'Atuação Jurídica na Defesa Integral dos Direitos dos Autistas',
+    headline: 'Defendendo a Dignidade, Saúde, Educação e Futuro das Pessoas Autistas',
+    subheadline: 'Advocacia altamente especializada para autistas e famílias atípicas conquistarem seus direitos constitucionais.',
+    image: '/images/serviços/novo.jpeg',
+    imageAlt: 'Dra. Raquel Rinaldi - Especialista em Direitos dos Autistas e Famílias TEA',
     
     painPoints: {
-      title: 'Uma negativa não é o fim. É o começo da luta pelos seus direitos.',
-      description: 'O INSS nega muitos benefícios que deveriam ser concedidos. Com a estratégia jurídica correta, podemos reverter decisões injustas.',
+      title: 'A legislação garante inclusão e direitos, mas o acesso real costuma ser negado.',
+      description: 'Muitas famílias atípicas enfrentam negativas arbitrárias de planos de saúde, barreiras na inclusão escolar e dificuldades para obter o BPC/LOAS ou isenções.',
       questions: [
-        'Seu benefício foi negado pelo INSS?',
-        'Discorda da decisão da perícia médica?',
-        'Teve recurso negado administrativamente?',
-        'Precisa entrar com ação judicial?'
+        'Seu plano de saúde negou ou limitou o tratamento de terapias especializadas (ABA)?',
+        'A escola recusa matrícula, cobra taxa extra ou nega o mediador escolar para seu filho?',
+        'Você teve o pedido de BPC/LOAS indeferido sob alegação de renda ou falta de incapacidade?',
+        'Sabia que famílias de autistas têm direito a isenções tributárias significativas de IPVA, IPI, ICMS?',
+        'Nossa atuação garante que a lei seja cumprida na prática, com todo o acolhimento que sua família merece.'
       ]
     },
     
     explanation: {
-      title: 'Como Funcionam Contestações e Recursos',
-      description: 'Utilizamos todos os recursos legais disponíveis para reverter decisões desfavoráveis e garantir que você receba o que é seu por direito.',
+      title: 'Proteção e Defesa Integral dos Direitos Autistas',
+      description: 'Oferecemos uma assessoria jurídica completa, artesanal e profundamente especializada em todas as frentes de direito ligadas ao Transtorno do Espectro Autista (TEA). Nosso objetivo é poupar as famílias do desgaste burocrático e assegurar tudo que a lei lhes concede.',
       details: [
-        'Recursos administrativos no INSS',
-        'Ações judiciais na Justiça Federal',
-        'Contestação de perícias médicas',
-        'Recursos em segunda instância (TRF)',
-        'Recursos especiais (STJ) e extraordinários (STF)',
-        'Defesa em processos de revisão do INSS',
-        'Acompanhamento processual completo'
+        'Garantia de Terapias Multidisciplinares pelo Método ABA sem limitação de sessões',
+        'Pedidos judiciais urgentes com liminares contra negativas de planos de saúde',
+        'Garantia de Mediador Escolar especializado e adaptações pedagógicas (PEI) gratuitas',
+        'Combate à cobrança de taxas extras e recusa de matrículas por instituições de ensino',
+        'Obtenção e restabelecimento do Benefício de Prestação Continuada (BPC/LOAS)',
+        'Isenções completas de tributos (IPVA, IPI, ICMS) na aquisição de veículos',
+        'Planejamento previdenciário atípico, curatela humanizada e proteção patrimonial sucessória'
       ]
     },
     
     benefits: [
       {
-        icon: 'shield',
-        title: 'Defesa Especializada',
-        description: 'Doutora em Direito com 15 anos de experiência em sua defesa'
+        icon: 'heart',
+        title: 'Atendimento Acolhedor',
+        description: 'Advocacia sensível às dores e necessidades das mães atípicas e suas famílias'
+      },
+      {
+        icon: 'shield-check',
+        title: 'Domínio da Legislação',
+        description: 'Vasta expertise nas leis inclusivas (Lei Berenice Piana, Estatuto do PCD)'
       },
       {
         icon: 'trending-up',
-        title: 'Alta Taxa de Sucesso',
-        description: 'Milhares de casos revertidos ao longo dos anos'
+        title: 'Atuação Estratégica',
+        description: 'Mais de 15 anos de trajetória com sólida taxa de resoluções favoráveis'
       },
       {
         icon: 'file-check',
-        title: 'Todas as Instâncias',
-        description: 'Atuamos desde o INSS até os tribunais superiores'
-      },
-      {
-        icon: 'users',
-        title: 'Acompanhamento Total',
-        description: 'Você fica informado de cada etapa do processo'
+        title: 'Ações Ágeis e Liminares',
+        description: 'Pedidos judiciais rápidos para início imediato ou continuidade de terapias'
       }
     ],
     
     testimonials: [
       {
-        name: 'Roberto Almeida',
-        location: 'Salvador, BA',
-        text: 'Meu BPC foi negado 3 vezes. A Dra. Raquel entrou com ação judicial e conseguiu em 6 meses!',
-        result: 'Recurso ganho na Justiça'
+        name: 'Juliana Medeiros',
+        location: 'Rio de Janeiro, RJ',
+        text: 'A Dra. Raquel foi o anjo que apareceu em nossas vidas. O plano de saúde havia cortado as terapias ABA do meu filho de 4 anos. Ela entrou com ação e em menos de 48 horas o juiz concedeu a liminar obrigando o restabelecimento total. Indico de olhos fechados!',
+        result: 'Liminar de Terapias ABA deferida em 48h'
       },
       {
-        name: 'Ana Paula Costa',
-        location: 'Belo Horizonte, MG',
-        text: 'Aposentadoria negada pelo INSS. Recorremos e ganhamos! Recebi tudo com retroativos.',
-        result: 'Decisão revertida'
+        name: 'Márcia Ferreira',
+        location: 'São Paulo, SP',
+        text: 'A escola do meu filho autista dizia que não tinha obrigação de fornecer mediador sem cobrar a mais. Graças à Dra. Raquel, garantimos o direito ao mediador e à adaptação pedagógica correta na Justiça. O desenvolvimento dele disparou!',
+        result: 'Inclusão Escolar com Mediador Garantida'
       }
     ],
     
     process: [
       {
         step: 1,
-        title: 'Análise da Negativa',
-        description: 'Estudamos os motivos da negativa e identificamos os argumentos jurídicos.'
+        title: 'Análise do Laudo e Contrato',
+        description: 'Avaliamos detalhadamente os laudos médicos, contratos de planos de saúde e documentos escolares para traçar a melhor estratégia.'
       },
       {
         step: 2,
-        title: 'Estratégia Jurídica',
-        description: 'Elaboramos a melhor estratégia: recurso administrativo ou ação judicial.'
+        title: 'Estruturação Jurídica',
+        description: 'Coletamos evidências e elaboramos peças jurídicas robustas, focadas no direito à saúde, educação ou benefício específico.'
       },
       {
         step: 3,
-        title: 'Interposição',
-        description: 'Entramos com o recurso ou ação com toda fundamentação jurídica.'
+        title: 'Medidas de Urgência',
+        description: 'Protocolamos ações judiciais urgentes com pedidos de liminar para garantir direitos essenciais de imediato.'
       },
       {
         step: 4,
-        title: 'Vitória',
-        description: 'Acompanhamos até a reversão da decisão e concessão do benefício.'
+        title: 'Acompanhamento Próximo',
+        description: 'Mantemos um contato contínuo e humanizado com as famílias, cuidando do processo até a vitória definitiva.'
       }
     ],
     
     finalCTA: {
-      headline: 'Não Aceite uma Negativa Injusta',
-      subheadline: 'Você tem direito a recorrer e lutar pelo que é seu',
-      urgency: 'Consulta gratuita - Analise seu caso agora'
+      headline: 'Garanta o Desenvolvimento e a Dignidade de Quem Você Mais Ama',
+      subheadline: 'Não se resigne com negativas arbitrárias. Defendemos os direitos do seu filho com acolhimento e a máxima dedicação jurídica.',
+      urgency: 'Consulta jurídica especializada - Entenda os direitos do autista agora'
     },
     
-    whatsappMessage: 'Olá Dra. Raquel, meu benefício foi negado e preciso recorrer.'
+    whatsappMessage: 'Olá Dra. Raquel, gostaria de agendar uma consulta sobre direitos dos autistas e da minha família.'
   }
 ];
 
