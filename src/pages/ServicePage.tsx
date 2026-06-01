@@ -119,7 +119,7 @@ export default function ServicePage() {
                   className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#1e40af] to-[#1d4ed8] text-white font-semibold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(30,64,175,0.4)]"
                 >
                   <MessageCircle size={20} />
-                  <span>Consulta Gratuita</span>
+                  <span>Fale comigo</span>
                 </a>
                 <Link
                   to="/#servicos"
@@ -316,7 +316,7 @@ export default function ServicePage() {
               <div className="mt-8 flex items-center justify-center gap-6 text-sm text-white/60">
                 <div className="flex items-center gap-2">
                   <Check size={16} className="text-[#1e40af]" />
-                  Consulta Gratuita
+                  Fale comigo
                 </div>
                 <div className="flex items-center gap-2">
                   <Check size={16} className="text-[#1e40af]" />

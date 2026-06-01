@@ -237,7 +237,7 @@ export const servicesData: ServiceDetail[] = [
     process: [
       {
         step: 1,
-        title: 'Consulta Gratuita',
+        title: 'Fale comigo',
         description: 'Conte sua situação pelo WhatsApp. Vamos avaliar se você tem direito ao BPC/LOAS.'
       },
       {

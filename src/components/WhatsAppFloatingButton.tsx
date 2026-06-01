@@ -29,7 +29,7 @@ export default function WhatsAppFloatingButton() {
               Precisa de ajuda?
             </p>
             <p className="text-white/60 text-xs leading-relaxed">
-              Fale conosco agora pelo WhatsApp. Consulta gratuita!
+              Fale conosco agora pelo WhatsApp. Fale comigo!
             </p>
             {/* Triangle pointer */}
             <div className="absolute -bottom-2 right-6 w-4 h-4 glass rotate-45" />

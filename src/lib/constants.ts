@@ -124,7 +124,7 @@ export const SERVICES = [
 export const STEPS = [
   {
     step: 1,
-    title: 'Consulta Gratuita',
+    title: 'Fale comigo',
     description: 'Entre em contato pelo WhatsApp para uma análise inicial gratuita e sem compromisso do seu caso.',
   },
   {

@@ -119,7 +119,7 @@ export default function Hero() {
                 aria-label="Falar com advogada pelo WhatsApp"
               >
                 <span className="relative z-10 flex items-center gap-3">
-                  Consulta Gratuita
+                  Fale comigo
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
@@ -181,7 +181,7 @@ export default function Hero() {
                       <span className="text-2xl">✓</span>
                     </div>
                     <div>
-                      <p className="text-white font-semibold">Consulta Gratuita</p>
+                      <p className="text-white font-semibold">Fale comigo</p>
                       <p className="text-white/60 text-sm">Sem compromisso</p>
                     </div>
                   </div>
